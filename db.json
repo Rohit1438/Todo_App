@@ -1,0 +1,50 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "casual dinner",
+      "description": "Milk, eggs, bread, fruits",
+      "completed": false,
+      "priority": 2
+    },
+    {
+      "id": 2,
+      "title": "Finish homework",
+      "description": "Math assignment, reading",
+      "completed": false,
+      "priority": 1
+    },
+    {
+      "id": 3,
+      "title": "Go for a run",
+      "description": "5 miles, evening",
+      "completed": true,
+      "priority": 3
+    },
+    {
+      "title": "Coding",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "title": "feding dog",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "Singing",
+      "completed": true,
+      "id": 6
+    },
+    {
+      "title": "sleep",
+      "completed": true,
+      "id": 7
+    },
+    {
+      "title": "going to swim",
+      "completed": true,
+      "id": 8
+    }
+  ]
+}
