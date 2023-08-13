@@ -1,50 +1,70 @@
 {
-  "todos": [
+  "data": [
     {
       "id": 1,
-      "title": "casual dinner",
-      "description": "Milk, eggs, bread, fruits",
-      "completed": false,
-      "priority": 2
+      "userdetails": {
+        "username": "Rohit1438",
+        "email": "rohitbanerjee202@gmail.com",
+        "password": "1234"
+      },
+      "todos": [
+        {
+          "id": 1,
+          "title": "Buy groceries",
+          "description": "Milk, eggs, bread, fruits",
+          "completed": false,
+          "priority": 2
+        },
+        {
+          "id": 2,
+          "title": "Finish homework",
+          "description": "Math assignment, reading",
+          "completed": false,
+          "priority": 1
+        },
+        {
+          "id": 3,
+          "title": "Go for a run",
+          "description": "5 miles, evening",
+          "completed": true,
+          "priority": 3
+        }
+      ]
     },
     {
-      "id": 2,
-      "title": "Finish homework",
-      "description": "Math assignment, reading",
-      "completed": false,
-      "priority": 1
+      "userdetails": {
+        "username": "rohi",
+        "email": "rohitbanerjee202@gmail.com",
+        "password": "1234"
+      },
+      "todos": [],
+      "id": 2
     },
     {
-      "id": 3,
-      "title": "Go for a run",
-      "description": "5 miles, evening",
-      "completed": true,
-      "priority": 3
+      "userdetails": {
+        "username": "mangal",
+        "email": "rohitbanerjee202@gmail.com",
+        "password": "1234"
+      },
+      "todos": [],
+      "id": 3
     },
     {
-      "title": "Coding",
-      "completed": false,
+      "userdetails": {
+        "username": "raj",
+        "email": "raj@gmail.com",
+        "password": "1234"
+      },
+      "todos": [
+        {
+          "id": 1 ,
+          "title": "rajs todo",
+          "description": "5 miles, evening",
+          "completed": true,
+          "priority": 3
+        }
+      ],
       "id": 4
-    },
-    {
-      "title": "feding dog",
-      "completed": false,
-      "id": 5
-    },
-    {
-      "title": "Singing",
-      "completed": true,
-      "id": 6
-    },
-    {
-      "title": "sleep",
-      "completed": true,
-      "id": 7
-    },
-    {
-      "title": "going to swim",
-      "completed": true,
-      "id": 8
     }
   ]
 }

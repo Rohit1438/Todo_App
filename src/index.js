@@ -1,26 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import AuthContextProvider from './Context/AuthContextProvider';
-import DataContextProvider from './Context/DataContextProvider';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import AuthContextProvider from "./Context/AuthContextProvider";
+import DataContextProvider from "./Context/DataContextProvider";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./Redux/store";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-<AuthContextProvider>
-  <DataContextProvider>
-
-
-<App />
-  </DataContextProvider>
-
-
-</AuthContextProvider>
-    
-
-  </React.StrictMode>
+  // <React.StrictMode>
+    <AuthContextProvider>
+      <DataContextProvider>
+        <BrowserRouter>
+        <Provider store={store}>
+           <App />
+        </Provider>
+         
+        </BrowserRouter>
+      </DataContextProvider>
+    </AuthContextProvider>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

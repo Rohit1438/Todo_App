@@ -4,16 +4,18 @@ import styled from 'styled-components';
 import TodoCards from './TodoCards';
 import { DataContext } from '../Context/DataContextProvider';
 import axios from "axios"
-const Url="http://localhost:8080/todos"
+const Url="http://localhost:8080/data"
 
 const Todo = () => {
+  const id=JSON.parse(localStorage.getItem("todo_app"))
     const {todos,setTodos,sort,setSort}=useContext(DataContext)
     const incompletedTodos = todos.filter((task) => !task.completed);
     const completedTodos = todos.filter((task) => task.completed);
     
 const getTodos=async()=>{
-let res=await axios.get(Url)
-res=await res.data.reverse()
+  console.log(id)
+let res=await axios.get(`${Url}/${id}`)
+res=await res.data.todos.reverse()
 setTodos([...res])
 }
 
@@ -46,6 +48,7 @@ try{
 }
   return (
     <Div>
+        
         <div id='heading'>
         <h1>Todo</h1>
         </div>
@@ -79,9 +82,10 @@ try{
 
 export default Todo
 const Div=styled.div`
-  width: 50%;
-
+  width: 100%;
+/* border: 1px solid red; */
   margin: auto;
+height: 100vh;
 
 
   @media(max-width:500px) {
@@ -94,8 +98,9 @@ p{
 
 `
 const DIV=styled.div`
-  width: 100%;
+  width: 50%;
   /* border: 2px solid purple; */
+  height: 100vh;
   margin: auto;
 
   .form_div>form{
